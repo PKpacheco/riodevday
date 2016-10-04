@@ -1,0 +1,25 @@
+{% load staticfiles %}
+ <section class="fornecedores">
+        <h1>Comunidades</h1>
+            <div class="items">
+                <ul>
+                {% for community in communities %}
+                    <li>
+                        <div class="item">   
+                        
+                            <div class="head">
+                               {{ community.name }} 
+                            </div>
+   
+                                </div>                             
+                            </div>
+                            </a>
+                    </li>
+                 {% empty %}   
+                    <h3> Nenhuma comunidade cadastrada</h3>
+                {% endfor %}
+                </ul>
+
+    </section>
+
+

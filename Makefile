@@ -18,3 +18,23 @@ shell:
 	python3 manage.py shell --settings=riodevday.settings
 
 
+
+initial_deploy:
+	cap production setup:install_requirements_server
+	cap production deploy
+	cap production setup:create_folders
+	cap production setup:install_requirements
+	cap production setup:conf_files
+	cap production setup:migrations
+	cap production setup:collect_static
+	cap production setup:restart_app
+	
+
+deploy:
+	cap production deploy
+	cap production setup:install_requirements
+	cap production setup:migrations
+	cap production setup:collect_static
+	cap production setup:restart_app
+
+

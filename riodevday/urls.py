@@ -11,4 +11,4 @@ urlpatterns = [
     url(r'^apoiadores/', include('supports.urls', namespace='supports')),
     url(r'^comunidades/', include('communities.urls', namespace='communities')),
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

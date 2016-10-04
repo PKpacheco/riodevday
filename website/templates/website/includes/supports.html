@@ -1,0 +1,28 @@
+{% load staticfiles %}
+ <section class="fornecedores">
+<h1>Nossos apoiadores</h1>
+<div class="items">
+    <ul>
+    {% for support in supports %}
+        <li>
+            <div class="item">   
+            
+                <div class="head">
+                   {{ support.name }} 
+                </div>
+                <a href="{{support.social_network}}">
+                  <img src="{{support.photo }}" height="420">
+
+                </a>
+                    </div>                             
+                </div>
+                </a>
+        </li>
+     {% empty %}   
+        <h3> Nenhuma apoiador cadastrado</h3>
+    {% endfor %}
+    </ul>
+
+</section>
+
+

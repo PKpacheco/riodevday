@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<section class="fornecedores">
+<h1>Patrocinadores</h1>
+    <div class="items">
+        <ul>
+        {% for sponsor in sponsord %}
+            <li>
+                <div class="item">   
+                
+                    <div class="head">
+                       {{ sponsor.name }} 
+                    </div>
+
+                        </div>                             
+                    </div>
+                    </a>
+            </li>
+        <h3> Se interessou em nos patrocinar? Envie um email para rio.gdg@gmail.com</h3>
+
+         {% empty %}   
+            <h4> Ainda não temos nenhum patrocinador. Se você ou sua empresa se interessou em nos patrocinar. Envie um email para rio.gdg@gmail.com</h4>
+        {% endfor %}
+        </ul>
+    </section>
+

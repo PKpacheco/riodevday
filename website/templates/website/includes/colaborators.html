@@ -1,0 +1,30 @@
+{% load staticfiles %}
+ <section class="coach">
+        <h1>Nossos Colaboradores</h1>
+            <div class="coaches">
+            <p>Nossos colaboradores, são voluntários que se uniram para montar esse evento.</p>
+                <ul>
+                {% for colaborator in colaborators %}
+                    <li>
+                        <div class="item">   
+                        
+                            <div class="head">
+                               {{ colaborator.name }} 
+                            </div>
+                            <img src="{{ colaborator.photo_url }}" class="colaborator" />
+
+   
+                                </div>                             
+                            </div>
+                            </a>
+                    </li>
+                 {% empty %}   
+                    <h3> Nenhum colaborador cadastrado</h3>
+                {% endfor %}
+                </ul>
+
+    </section>
+
+
+
+

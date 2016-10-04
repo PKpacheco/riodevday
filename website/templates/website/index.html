@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rio Dev Day</title>
+</head>
+<body>
+
+    <div class ="container">
+        <div class = "navbar-header">
+        <ul class="nav navbar-nav">
+            <li></li>
+            <li>teste</li>
+       <ul>
+    </div>
+
+    <img src="{% static 'img/riodevday.jpg' %}">
+
+        {% include 'website/includes/submissions.html' %}
+        {% include 'website/includes/colaborators.html' %}
+        {% include 'website/includes/communities.html' %}
+        {% include 'website/includes/sponsors.html' %}
+        {% include 'website/includes/supports.html' %}
+</body>
+<div class="row credits">
+    <div class="col-md-12">
+       @RioDevDay 2016
+    </div>
+</div>
+</html>
